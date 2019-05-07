@@ -1,0 +1,17 @@
+.loginForm{
+    position: relative;
+    margin: 10% auto;
+    width: fit-content;
+    text-align: center;
+    .loginInput{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .loginInputApply{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+    }
+}

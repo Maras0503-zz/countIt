@@ -1,25 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import LoginForm from './components/loginForm/LoginForm.js';
+import {MuiThemeProvider, createMuiTheme} from '@material-ui/core';
+import lightGreen from '@material-ui/core/colors/lightGreen';
+
+const theme = createMuiTheme({
+  typography: {
+    useNextVariants: true,
+  },
+  palette: {
+    primary: lightGreen
+  }
+}
+);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MuiThemeProvider theme={theme}>
+      <div className="App">
+        <LoginForm></LoginForm>
+      </div>
+    </MuiThemeProvider>
   );
 }
 
